@@ -1,0 +1,69 @@
+@import "variables";
+@import "mixins";
+@import "reset";
+
+#top-nav {
+  ul {
+    background-color: $navBar;
+    width: 100%;
+    @include clearFix;
+  }
+  li {
+    float: left;
+    width: (100% / 5);
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    &:hover {
+      background-color: lighten($navBar,10);
+      font-weight: bold;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+#top-banner {
+  @include top;
+}
+#top-banner img {
+  border-bottom: 4px solid complement($navBar);
+}
+
+#projects li{
+  @include grid(6, 4%);
+  img{
+    width: 100%;
+  }
+}
+footer {
+  clear: both;
+  width: 100%;
+  height: 30px;
+  background-color: rgba($navBar, .8);
+  border-top: 5px solid rgba(complement(white), .1);
+  position: fixed;
+  bottom: 0;
+  opacity: 50%;
+}
+#footer {
+  @include footerText(white);
+  display: block;
+}
+.box p {
+  padding: 20px 50px 20px 50px;
+}
+.box p::first-letter {
+  font-size: 150%;
+}
+#apple_news {
+  img {
+    width: 200px;
+    float: left;
+    padding: 15px;
+  }
+}

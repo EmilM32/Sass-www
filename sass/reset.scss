@@ -1,0 +1,19 @@
+html, body, ul, ol, li, form, fieldset, legend {
+	margin: 0;
+	padding: 0;
+}
+body {
+  background-color: $backgroundColor;
+  font-family: Helvetica;
+}
+li {
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6, p { margin-top: 0; }
+.box {
+  width: 100%;
+  //max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
